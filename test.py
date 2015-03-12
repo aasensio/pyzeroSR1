@@ -1,7 +1,6 @@
 import pyzeroSR1
 import scipy.linalg
 import numpy as np
-import datetime
 
 N = 12
 tmp = scipy.linalg.hilbert(N)
@@ -20,6 +19,4 @@ fcnGrad = lambda x : pyzeroSR1.smoothFunctions.normSquared(x, A, At, b)
 
 opts = {'tol': 1e-6, 'grad_tol' : 1e-6, 'nmax' : 1000, 'verbose' : False, 'N' : N, 'L': normQ, 'verbose': 25}
 
-start = datetime.datetime.now()
 xk, nIteration, stepSizes = pyzeroSR1.zeroSR1(fcnGrad, h,prox, opts)
-end = datetime.datetime.now()
