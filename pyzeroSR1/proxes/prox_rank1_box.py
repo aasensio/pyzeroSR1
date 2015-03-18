@@ -41,7 +41,7 @@ def prox_rank1_box(lwr, upr, *args, **kwargs):
 	Python version: A. Asensio Ramos (March 12, 2015)
 	"""
 	
-	prox = lambda x, t : np.max([np.min([upr,x]), lwr]))
+	prox = lambda x, t : np.max([np.min([upr,x]), lwr])
 	prox_brk_pts = lambda s : np.hstack((lwr,upr))
 		
 	return prox_rank1_generic(prox, prox_brk_pts, *args, **kwargs)

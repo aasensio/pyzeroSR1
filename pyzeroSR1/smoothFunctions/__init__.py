@@ -1,1 +1,1 @@
-from .normSquared import * 
+from normSquared import *
